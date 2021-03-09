@@ -66,7 +66,7 @@ dotnet test
 ```
 
 ## API Documentation
-[Postman API Documentation](https://documenter.getpostman.com/view/6831940/SVtN3BSY)
+[Postman API Documentation](https://documenter.getpostman.com/view/5905120/Tz5nby7V)
 
 | Method  | Description| Route |
 | ------------- | ------------- | ------------- |
