@@ -40,6 +40,11 @@ Connecting to localhost...done
       mssql>
 ```
 
+### Run migrations
+```
+dotnet ef database update
+```
+
 ### Run the project
 ```bash
 dotnet run
@@ -76,4 +81,11 @@ dotnet test
 *   **Ryan Wire** 
 
 ## Notes
-None
+### Create a migration
+```
+dotnet ef migrations add initialMigration
+```
+### Undo migrations
+```
+dotnet ef migrations remove
+```
