@@ -76,10 +76,22 @@ dotnet test
 | Method  | Description| Route |
 | ------------- | ------------- | ------------- |
 | GET |  Get all commands | `/api/commands` |
-| POST | Create a commands | `/api/commands` |
-| GET |  Get a specific commands | `/api/commands/:id` |
-| PUT |  Update a specific commands | `/api/commands/:id` |
-| DELETE | Delete a specific commands |`/api/commands/:id` |
+| POST | Create a command | `/api/commands` |
+| GET |  Get a specific command | `/api/commands/:id` |
+| PUT |  Update a specific command | `/api/commands/:id` |
+| PATCH |  Update a specific command partially | `/api/commands/:id` |
+| DELETE | Delete a specific command |`/api/commands/:id` |
+
+### Body for PATCH request
+```
+[
+    {
+        "op": "replace",
+        "path": "/howto",
+        "value": "Some new value"
+    }
+]
+```
 
 ## Author
 
