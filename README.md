@@ -70,6 +70,8 @@ dotnet restore
 dotnet test
 ```
 
+### Swagger Docs Endpoint
+/swagger/
 ## API Documentation
 [Postman API Documentation](https://documenter.getpostman.com/view/5905120/Tz5nby7V)
 
