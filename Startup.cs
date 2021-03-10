@@ -38,6 +38,7 @@ namespace Commander
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             //services.AddScoped<ICommanderRepo, MockCommanderRepo>();
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
+            services.AddRouting(options => options.LowercaseUrls = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
