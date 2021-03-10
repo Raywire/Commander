@@ -1,5 +1,6 @@
 ### Prerequisites
 -  [.NET Core SDK](https://dotnet.microsoft.com/download)
+-  [Entity Framework Core SDK](https://docs.microsoft.com/en-us/ef/core/get-started/overview/first-app?tabs=netcore-cli)
 
 ### Description
 This is a web API that performs Create, Read, Update, and Delete (CRUD) operations
@@ -50,6 +51,10 @@ dotnet ef database update
 dotnet run
 ```
 
+### Run the project in development
+```bash
+dotnet watch run
+```
 ### Build the project
 ```bash
 dotnet build
@@ -81,6 +86,15 @@ dotnet test
 *   **Ryan Wire** 
 
 ## Notes
+### Create the database
+Run the following commands:
+```
+dotnet tool install --global dotnet-ef
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+```
+
 ### Create a migration
 ```
 dotnet ef migrations add initialMigration
