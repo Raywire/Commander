@@ -117,3 +117,15 @@ dotnet ef migrations add initialMigration
 ```
 dotnet ef migrations remove
 ```
+
+## Set user secrets
+```
+dotnet user-secrets set "InitialCatalog" ""
+dotnet user-secrets set "UserID" "" 
+dotnet user-secrets set "Password" "" 
+```
+
+## List user secrets
+````
+dotnet user-secrets list  
+```
