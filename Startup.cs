@@ -30,11 +30,12 @@ namespace Commander
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.ConnectionString = Configuration.GetConnectionString("CommanderConnection");
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(Configuration.GetConnectionString("CommanderConnection"));
+
             builder.InitialCatalog = Configuration["InitialCatalog"];
             builder.UserID = Configuration["UserID"];
             builder.Password = Configuration["Password"];
+
             services.AddDbContext<CommanderContext>(opt => opt.UseSqlServer(builder.ConnectionString));
 
             services.AddControllers().AddNewtonsoftJson(s => {
