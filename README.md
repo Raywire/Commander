@@ -126,6 +126,6 @@ dotnet user-secrets set "Password" ""
 ```
 
 ## List user secrets
-````
+```
 dotnet user-secrets list  
 ```
